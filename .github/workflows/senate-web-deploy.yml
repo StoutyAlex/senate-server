@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "./packages/senate-web/**"
+      - "packages/senate-web/**"
 
 env:
   AWS_REGION: eu-west-1
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./packages/senate-web
+        working-directory: packages/senate-web
     steps:
       - name: 'Checking out from GitHub'
         uses: 'actions/checkout@v2'
