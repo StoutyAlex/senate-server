@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Website for the senate-server",
   "scripts": {
-    "cdk:deploy": "echo \"Deploying!\""
+    "cdk:deploy": "echo \"Deploying Yey!\""
   },
   "author": "",
   "license": "ISC",
