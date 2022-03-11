@@ -3,7 +3,7 @@ import * as cloudfront from 'aws-cdk-lib/aws-cloudfront'
 import { Bucket, BucketEncryption, BlockPublicAccess } from 'aws-cdk-lib/aws-s3'
 import { BucketDeployment, Source } from 'aws-cdk-lib/aws-s3-deployment'
 import { Certificate } from 'aws-cdk-lib/aws-certificatemanager'
-import { HostedZone, ARecord, RecordTarget } from 'aws-cdk-lib/aws-route53'
+import { HostedZone, ARecord, RecordTarget, AaaaRecord } from 'aws-cdk-lib/aws-route53'
 import { CloudFrontTarget } from 'aws-cdk-lib/aws-route53-targets'
 import { Construct } from 'constructs'
 import path from 'path'
@@ -75,6 +75,11 @@ export class SenateWebsite extends cdk.Stack {
         new ARecord(this, `domain`, {
             zone: senateHostedZone,
             target: RecordTarget.fromAlias(new CloudFrontTarget(frontendDistribution)),
+        })
+
+        new AaaaRecord(this, 'AaaaDomain', {
+          zone: senateHostedZone,
+          target: RecordTarget.fromAlias(new CloudFrontTarget(frontendDistribution)),
         })
     }
 }
