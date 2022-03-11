@@ -35,7 +35,7 @@ export class SenateWebsite extends cdk.Stack {
             zoneName: props.hostedZone.name,
         })
 
-        new BucketDeployment(this, `TaxManagerFrontendDeployment`, {
+        new BucketDeployment(this, `SenateWebsiteDeployment`, {
             destinationBucket: s3Bucket,
             sources: [Source.asset(path.resolve(__dirname, '../out'))],
         })
