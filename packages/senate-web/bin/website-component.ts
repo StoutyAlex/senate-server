@@ -6,7 +6,7 @@ const app = new App()
 const config: SenateWebsiteProps = {
     domainName: 'senateserver.co.uk',
     bucketName: 'senate-server-website-frontend',
-    certificateArn: 'arn:aws:acm:eu-west-1:477948800870:certificate/234eb11e-59d3-4acb-abac-4753d376fd22',
+    certificateArn: 'arn:aws:acm:us-east-1:477948800870:certificate/5bed17dc-f3ee-49b9-b8b4-bbb8b36a69b7',
     hostedZone: {
         id: 'Z031958332WIF5IG4KX9O',
         name: 'senateserver.co.uk'
