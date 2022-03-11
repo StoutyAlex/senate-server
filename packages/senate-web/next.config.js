@@ -1,5 +1,8 @@
-const withOptimizedImages = require('next-optimized-images');
 
-module.exports = withOptimizedImages({
+module.exports = {
   reactStrictMode: true,
-})
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
+}
