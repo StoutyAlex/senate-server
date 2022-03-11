@@ -2,7 +2,7 @@ import { App } from 'aws-cdk-lib'
 import { SenateWebsite, SenateWebsiteProps } from '../cdk/website-stack'
 
 const app = new App()
-git 
+
 const config: SenateWebsiteProps = {
     domainName: 'senateserver.co.uk',
     bucketName: 'senate-server-website-frontend',
