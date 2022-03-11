@@ -73,7 +73,6 @@ export class SenateWebsite extends cdk.Stack {
         })
 
         new ARecord(this, `domain`, {
-            recordName: 'senate-server',
             zone: senateHostedZone,
             target: RecordTarget.fromAlias(new CloudFrontTarget(frontendDistribution)),
         })
