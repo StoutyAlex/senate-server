@@ -7,7 +7,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "cdk:deploy": "cdk deploy senate-website"
+    "cdk:deploy": "cdk deploy senate-website --require-approval never"
   },
   "dependencies": {
     "next": "12.1.0",
