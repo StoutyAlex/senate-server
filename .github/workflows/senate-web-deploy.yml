@@ -29,11 +29,14 @@ jobs:
         with:
           node-version: 14
 
-      - name: install
+      - name: Install
         run: npm ci
 
       - name: build
         run: npm run build
 
-      - name: deploy
+      - name: Deploy
         run: npm run cdk:deploy
+
+      - name: Invalidate cloudfront distribution
+        run: aws cloudfront create-invalidation --distribution-id E1J7HHT6UCYNP8 --paths '/*'

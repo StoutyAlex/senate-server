@@ -28,7 +28,9 @@ const Home: NextPage = () => {
         <VStack spacing={4} align="stretch">
           <Box>
             <HStack justifyContent="space-between">
-              <PrimaryHeading>Senate Server</PrimaryHeading>
+              <PrimaryHeading>
+                Senate Server
+              </PrimaryHeading>
               <DiscordButton />
             </HStack>
           </Box>
