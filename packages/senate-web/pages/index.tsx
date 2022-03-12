@@ -20,7 +20,6 @@ export const Section = forwardRef<SectionProps, typeof Box>(({ opaque, ...props 
   )
 })
 
-
 const Home: NextPage = () => {
   return (
     <Container p={4} maxW="container.xl">
